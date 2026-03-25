@@ -1,35 +1,41 @@
-# EX 18 C program to find frequency of a character in the given input.
+# EX 17 C Program to compare two strings without using strcmp().
 ## DATE: 17-03-2026
 ## AIM:
-To write a C program to find frequency of a character in the given input.
+To write a C Program to compare two strings without using strcmp().
 
 ## Algorithm:
 1. Start.
-2. Define the required variable.
-3. Write program to find frequency of a character.
+2. Define a variables.
+3. Write program to compare two strings using nested for loop and if statement.
 4. Read the value using scanf.
 5. Ask the user to make an input.
 6. Print out the answer.
-7. End
+7. End.
 
 ## Program:
 ```c program
-#include<stdio.h> 
-#include<string.h> 
-int main()
-{
-int i,count=0,len;
-char str[100],val[100]; 
-scanf("%s %s",str,val); 
-len=strlen(str); 
-for(i=0;i<len;i++){
-if(str[i]==val[0]) 
-count++;
-}printf("%d",count);}
+#include <stdio.h>
+int main() {
+ char str1[100], str2[100];
+ int i = 0, flag = 0;
+ scanf("%s", str1);
+ scanf("%s", str2);
+ while (str1[i] != '\0' || str2[i] != '\0') {
+ if (str1[i] != str2[i]) {
+ flag = 1;
+ break;
+ }
+ i++; } 
+if (flag == 0) 
+printf("Strings are equal.\n");
+else
+ printf("Strings are not equal.\n");
+ return 0;
+}
 ```
 
 ## Output:
-![image](https://github.com/user-attachments/assets/d7ddee8b-e6b7-4e02-812a-df548f806dc8)
+![image](https://github.com/user-attachments/assets/db4f0bfb-1b19-44dd-b418-e4b75152555d)
 
 ## Result:
 Thus the program was executed and the output was verified successfully.
